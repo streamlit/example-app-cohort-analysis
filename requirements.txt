@@ -1,4 +1,6 @@
-streamlit 
+streamlit
 seaborn
 missingno
-textwrap
+openpyxl
+plotly
+# textwrap
