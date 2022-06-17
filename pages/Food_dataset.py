@@ -131,7 +131,9 @@ fig.add_heatmap(
     x=user_retention.columns,
     y=user_retention.index,
     z=user_retention,
-    colorscale="cividis",
+    # colorscale="Reds",
+    # colorscale="Sunsetdark",
+    colorscale="Redor"
     # colorscale="Viridis",
 )
 
