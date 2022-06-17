@@ -15,14 +15,25 @@ st.image(
     width=160,
 )
 
-st.title("Cohort for `Food` dataset")
+st.title("Cohort Analysis → `Food` dataset")
 
 st.write("")
 
 st.markdown(
-    """This demo is based on the [following code](http://www.gregreda.com/2015/08/23/cohort-analysis-with-python/).
+    """
 
-It calculates the `retention rate` (the percentage of active customers compared to the total number of customers, split by month). This `retention rate` is then visualized and interpreted through a heatmap.
+"""
+)
+st.markdown(
+    """
+
+    This demo is inspired by this [Cohort Analysis Tutorial](http://www.gregreda.com/2015/08/23/cohort-analysis-with-python/) 👉 [[Relay Food dataset]](https://github.com/springcoil/marsmodelling/blob/master/relay-foods.xlsx)
+
+"""
+)
+st.markdown(
+    """
+    It calculates the `retention rate` (the percentage of active customers compared to the total number of customers, split by month). This `retention rate` is then visualized and interpreted through a heatmap.
 """
 )
 
@@ -43,7 +54,7 @@ df.reset_index(inplace=True)
 # loading dataset CSV
 relay_foods_csv = pd.read_csv("datasets/relay-foods.csv")
 
-with st.expander("Show the `Food Transactions` dataframe"):
+with st.expander("Show the `Relay Food Transactions` dataframe"):
     st.write(relay_foods_csv)
 
 grouped = df.groupby(["CohortGroup", "OrderPeriod"])
@@ -62,12 +73,6 @@ def cohort_period(df):
     """
     Creates a `CohortPeriod` column, which is the Nth period based on the user's first purchase.
 
-    Example
-    -------
-    Say you want to get the 3rd month for every user:
-        df.sort(['UserId', 'OrderTime', inplace=True)
-        df = df.groupby('UserId').apply(cohort_period)
-        df[df.CohortPeriod == 3]
     """
     df["CohortPeriod"] = np.arange(len(df)) + 1
     return df
