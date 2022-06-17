@@ -5,19 +5,24 @@ import numpy as np
 import datetime as dt
 
 # The code below is for the title and logo for this page.
-st.set_page_config(page_title="Cohort for Bikes dataset", page_icon="🚲")
+st.set_page_config(page_title="Cohort Analysis on the Bikes dataset", page_icon="🚲")
 
 st.image(
     "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/bicycle_1f6b2.png",
     width=160,
 )
 
-st.title("Cohort for `Bikes` dataset")
+st.title("Cohort Analysis → `Bikes` dataset")
 
 st.write("")
 
 st.markdown(
-    """This demo is based on the [following code](https://github.com/maladeep/cohort-retention-rate-analysis-in-python).
+    """
+    This demo is inspired by this [Cohort Analysis Tutorial](https://github.com/maladeep/cohort-retention-rate-analysis-in-python) 👉 [[Sprocket Central Pty Ltd Bikes dataset]](https://www.kaggle.com/datasets/archit9406/customer-transaction-dataset)
+"""
+)
+st.markdown(
+    """
 
 It calculates the `retention rate` (the percentage of active customers compared to the total number of customers, split by month). This `retention rate` is then visualized and interpreted through a heatmap.
 """
@@ -64,7 +69,7 @@ def load_data():
 
 transaction_df = load_data()
 
-with st.expander("Show the `Bike Transactions` dataframe"):
+with st.expander("Show the `Sprocket Central Pty Ltd Bikes dataset` dataframe"):
     # st.write(df)
     st.write(transaction_df)
 
