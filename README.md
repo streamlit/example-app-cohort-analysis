@@ -7,11 +7,11 @@ This Cohort Analysis App calculates the `retention rate` (the percentage of acti
 
 These 	2 demos are based on the following tutorials:
 
-👉 [Cohort Analysis Tutorial](https://github.com/maladeep/cohort-retention-rate-analysis-in-python) on the [Sprocket Central Pty Ltd Bikes dataset](https://www.kaggle.com/datasets/archit9406/customer-transaction-dataset)
+👉 [Cohort Analysis Tutorial](https://github.com/maladeep/cohort-retention-rate-analysis-in-python) on the [Sprocket Central Pty Ltd Bikes dataset](https://www.kaggle.com/datasets/archit9406/customer-transaction-dataset).
 
 <img src ="https://user-images.githubusercontent.com/27242399/174384535-8e2885f9-4378-4950-b695-d92b35bd37d9.png" width="400px"></img>
 
-👉 [Cohort Analysis Tutorial](http://www.gregreda.com/2015/08/23) on the [Relay Food dataset](https://github.com/springcoil/marsmodelling/blob/master/relay-foods.xlsx)
+👉 [Cohort Analysis Tutorial](http://www.gregreda.com/2015/08/23/cohort-analysis-with-python/) on the [Relay Food dataset](https://github.com/springcoil/marsmodelling/blob/master/relay-foods.xlsx).
 
 <img src ="https://user-images.githubusercontent.com/27242399/174386573-882bee1d-38a1-435f-bdf3-a7713239e1e9.png" width="400px"></img>
 
