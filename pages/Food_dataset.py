@@ -135,11 +135,11 @@ fig.add_heatmap(
     # colorscale="Viridis",
 )
 
-fig.layout.title = "Monthly cohorts showing retention rates"
+fig.update_layout(title_text="Monthly cohorts showing retention rates", title_x=0.5)
 fig.layout.xaxis.title = "Cohort Group"
 fig.layout.yaxis.title = "Cohort Period"
 fig["layout"]["title"]["font"] = dict(size=25)
-fig.layout.template = "none"
+fig.layout.plot_bgcolor = "#efefef"  # Set the background color to white
 fig.layout.width = 750
 fig.layout.height = 750
 fig.layout.xaxis.tickvals = user_retention.columns

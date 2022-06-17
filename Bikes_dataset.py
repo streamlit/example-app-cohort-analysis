@@ -133,7 +133,6 @@ with col2:
             transaction_df["product_line"].isin(multiselect)
         ]
 
-
     if MetricSlider02 == "list_price":
         list_price_slider = st.slider(
             "List price (in $)", step=500, min_value=12, max_value=2091
@@ -175,15 +174,15 @@ try:
         x=retention.columns, y=retention.index, z=retention, colorscale="cividis"
     )
 
-    fig.layout.title = "Monthly cohorts showing retention rates"
+    fig.update_layout(title_text="Monthly cohorts showing retention rates", title_x=0.5)
     fig.layout.xaxis.title = "Cohort Group"
     fig.layout.yaxis.title = "Cohort Period"
     fig["layout"]["title"]["font"] = dict(size=25)
-    fig.layout.template = "none"
     fig.layout.width = 750
     fig.layout.height = 750
     fig.layout.xaxis.tickvals = retention.columns
     fig.layout.yaxis.tickvals = retention.index
+    fig.layout.plot_bgcolor = "#efefef"  # Set the background color to white
     fig.layout.margin.b = 100
     fig
 
