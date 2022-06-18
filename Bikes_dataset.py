@@ -18,17 +18,48 @@ st.write("")
 
 st.markdown(
     """
+
     This demo is inspired by this [Cohort Analysis Tutorial](https://github.com/maladeep/cohort-retention-rate-analysis-in-python) 👉 [[Sprocket Central Pty Ltd Bikes dataset]](https://www.kaggle.com/datasets/archit9406/customer-transaction-dataset)
+
 """
 )
-st.markdown(
+
+with st.expander("About this app"):
+
+    st.write("")
+
+    st.markdown(
+        """
+
+    This dataset comes from the hypothetical `Sprocket Central Pty Ltd`, a medium size bikes & cycling accessories organisation.
+
+    The data spans from `January 1, 2017` to `December 31, 2017` and is available in CSV format (downloadable [here](https://www.kaggle.com/datasets/archit9406/customer-transaction-dataset)).
+
+    Each row in the dataset contains information about an individual bike purchase:
+
+    - Who bought it
+    - How much they paid
+    - The bike's `brand` and `product line`
+    - Its `class` and `size`
+    - What day the purchase happened
+    - The day the product was first sold
     """
+    )
 
-It calculates the `retention rate` (the percentage of active customers compared to the total number of customers, split by month). This `retention rate` is then visualized and interpreted through a heatmap.
-"""
-)
+    st.write("")
 
-st.write("")
+    st.markdown(
+        """
+    The underlying code groups those purchases into cohorts and calculates the `retention rate` (split by month) so that one can answer the question:
+
+    *if I'm making weekly changes to my store to get people to come back and buy more bikes, are those changes working?"*
+
+    These cohorts are then visualized and interpreted through a heatmap [powered by Plotly](https://plotly.com/python/).
+
+    """
+    )
+
+    st.write("")
 
 # A function that will parse the date Time based cohort:  1 day of month
 def get_month(x):
@@ -69,8 +100,7 @@ def load_data():
 
 transaction_df = load_data()
 
-with st.expander("Show the `Sprocket Central Pty Ltd Bikes dataset` dataframe"):
-    # st.write(df)
+with st.expander("Show the `Bikes` dataframe"):
     st.write(transaction_df)
 
 
