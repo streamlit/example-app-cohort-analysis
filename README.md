@@ -7,13 +7,56 @@ This Cohort Analysis App calculates the `retention rate` (the percentage of acti
 
 These 	2 demos are based on the following tutorials:
 
-👉 [Cohort Analysis Tutorial](https://github.com/maladeep/cohort-retention-rate-analysis-in-python) on the [Sprocket Central Pty Ltd Bikes dataset](https://www.kaggle.com/datasets/archit9406/customer-transaction-dataset).
+---
+### First app (`Bikes` dataset)
+
+This demo is inspired by this [Cohort Analysis Tutorial](https://github.com/maladeep/cohort-retention-rate-analysis-in-python).
 
 <img src ="https://user-images.githubusercontent.com/27242399/174384535-8e2885f9-4378-4950-b695-d92b35bd37d9.png" width="400px"></img>
 
-👉 [Cohort Analysis Tutorial](http://www.gregreda.com/2015/08/23/cohort-analysis-with-python/) on the [Relay Food dataset](https://github.com/springcoil/marsmodelling/blob/master/relay-foods.xlsx).
+This dataset came from the hypothetical `Sprocket Central Pty Ltd`, a medium size bikes & cycling accessories organisation.
+
+The data was collected from `January 1, 2017` to `December 31, 2017`, and available in `CSV` format, downloadable [here](https://www.kaggle.com/datasets/archit9406/customer-transaction-dataset).
+
+Each row in the dataset contains information about an individual bike purchase:
+
+- Who bought it
+- How much they paid
+- The bike's `brand` and `product line`
+- Its `class` and `size`
+- What `day` the purchase happened
+- The `day` when the product was first sold
+
+The underlying code takes those purchases and groups them into cohorts and calculates the `retention rate`, split by month, so that one can answer the question:
+
+The underlying code groups those purchases into cohorts and calculates the `retention rate` (split by month) so that one can answer the question:
+
+*if I'm making weekly changes to my store to get people to come back and buy more bikes, are those changes working?"*
+
+These cohorts are then visualized and interpreted through a heatmap [powered by Plotly](https://plotly.com/python/).
+
+
+---
+### Second app (`Food` dataset)
+
+This demo is inspired by this [Cohort Analysis Tutorial](http://www.gregreda.com/2015/08/23/cohort-analysis-with-python/)
 
 <img src ="https://user-images.githubusercontent.com/27242399/174386573-882bee1d-38a1-435f-bdf3-a7713239e1e9.png" width="400px"></img>
+
+This dataset comes from the hypothetical `Relay Food` company. The data spans from `June 1, 2009` to `September 3, 2010` and is available in CSV format (downloadable [here](https://github.com/springcoil/marsmodelling/blob/master/relay-foods.xlsx)).
+
+Each row in the dataset contains information about an individual food order:
+
+   - Who bought it
+   - How much they paid
+   - The pick-up date
+
+The underlying code groups those purchases into monthly cohorts (with the user's cohort group based on their first order) and calculates the `retention rate` so that one can answer the question:
+
+ *if I'm making monthly changes to my shop to get people to come back and order more, are those changes working?"*
+
+These cohorts are then visualized and interpreted through a heatmap [powered by Plotly](https://plotly.com/python/).
+
 
 ---
 ### Process
