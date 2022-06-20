@@ -12,7 +12,7 @@ These 	2 demos are based on the following tutorials:
 
 This demo is inspired by this [Cohort Analysis Tutorial](https://github.com/maladeep/cohort-retention-rate-analysis-in-python).
 
-<img src ="https://user-images.githubusercontent.com/27242399/174384535-8e2885f9-4378-4950-b695-d92b35bd37d9.png" width="400px"></img>
+<img src ="https://user-images.githubusercontent.com/27242399/174592747-596cb67e-029b-444f-aaeb-975382a4128c.png" width="400px"></img>
 
 This dataset came from the hypothetical `Sprocket Central Pty Ltd`, a medium size bikes & cycling accessories organisation.
 
