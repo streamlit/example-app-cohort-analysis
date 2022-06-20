@@ -19,7 +19,7 @@ st.write("")
 st.markdown(
     """
 
-    This demo is inspired by this [Cohort Analysis Tutorial](https://github.com/maladeep/cohort-retention-rate-analysis-in-python) 👉 [[Sprocket Central Pty Ltd Bikes dataset]](https://www.kaggle.com/datasets/archit9406/customer-transaction-dataset)
+    This demo is inspired by this [Cohort Analysis Tutorial](https://github.com/maladeep/cohort-retention-rate-analysis-in-python).
 
 """
 )
@@ -52,7 +52,7 @@ with st.expander("About this app"):
         """
     The underlying code groups those purchases into cohorts and calculates the `retention rate` (split by month) so that one can answer the question:
 
-    *if I'm making weekly changes to my store to get people to come back and buy more bikes, are those changes working?"*
+    *if I'm making monthly changes to my store to get people to come back and buy more bikes, are those changes working?"*
 
     These cohorts are then visualized and interpreted through a heatmap [powered by Plotly](https://plotly.com/python/).
 

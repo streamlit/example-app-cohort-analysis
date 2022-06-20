@@ -27,17 +27,45 @@ st.markdown(
 st.markdown(
     """
 
-    This demo is inspired by this [Cohort Analysis Tutorial](http://www.gregreda.com/2015/08/23/cohort-analysis-with-python/) 👉 [[Relay Food dataset]](https://github.com/springcoil/marsmodelling/blob/master/relay-foods.xlsx)
-
+    This demo is inspired by this [Cohort Analysis Tutorial](http://www.gregreda.com/2015/08/23/cohort-analysis-with-python/).
 """
 )
-st.markdown(
+
+with st.expander("About this app"):
+
+    st.write("")
+
+    st.markdown(
+        """
+
+This dataset comes from the hypothetical `Relay Food` company.
+
+The data spans from `June 1, 2009` to `September 3, 2010` and is available in CSV format (downloadable [here](https://github.com/springcoil/marsmodelling/blob/master/relay-foods.xlsx)).
+
+Each row in the dataset contains information about an individual food order:
+
+   - Who bought it
+   - How much they paid
+   - The pick-up date
+
+"""
+    )
+
+    st.write("")
+
+    st.markdown(
+        """
+
+The underlying code groups those purchases into monthly cohorts (with the user's cohort group based on their first order) and calculates the `retention rate` so that one can answer the question:
+
+ *if I'm making monthly changes to my shop to get people to come back and order more, are those changes working?"*
+
+These cohorts are then visualized and interpreted through a heatmap [powered by Plotly](https://plotly.com/python/).
+
     """
-    It calculates the `retention rate` (the percentage of active customers compared to the total number of customers, split by month). This `retention rate` is then visualized and interpreted through a heatmap.
-"""
-)
+    )
 
-st.write("")
+    st.write("")
 
 # loading dataset XLSX
 df = pd.read_excel("datasets/relay-foods.xlsx", sheet_name=1)
@@ -54,7 +82,7 @@ df.reset_index(inplace=True)
 # loading dataset CSV
 relay_foods_csv = pd.read_csv("datasets/relay-foods.csv")
 
-with st.expander("Show the `Relay Food Transactions` dataframe"):
+with st.expander("Show the `Food` dataframe"):
     st.write(relay_foods_csv)
 
 grouped = df.groupby(["CohortGroup", "OrderPeriod"])
