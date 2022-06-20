@@ -206,7 +206,13 @@ try:
     fig = go.Figure()
 
     fig.add_heatmap(
-        x=retention.columns, y=retention.index, z=retention, colorscale="cividis"
+        # x=retention.columns, y=retention.index, z=retention, colorscale="cividis"
+        x=retention.columns,
+        y=retention.index,
+        z=retention,
+        # Best
+        # colorscale="Aggrnyl",
+        colorscale="Bluyl",
     )
 
     fig.update_layout(title_text="Monthly cohorts showing retention rates", title_x=0.5)

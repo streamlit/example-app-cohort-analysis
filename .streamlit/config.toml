@@ -2,7 +2,9 @@
 
 # Primary accent for interactive elements
 base="light"
-primaryColor="#152396"
+# primaryColor="#152396"
+# primaryColor="#065275"
+primaryColor="#5ab9a1"
 
 [deprecation]
 showPyplotGlobalUse = false
